@@ -1,1 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+#image {
+  width: 300px;
+  margin-top: 20px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
