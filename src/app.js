@@ -1,12 +1,10 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
-
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
 window.onload = function() {
-  //write your code here
+  document
+    .getElementById("generateExcuse")
+    .addEventListener("click", function() {
+      document.getElementById("excuse").innerHTML = upload();
+    });
+
   let who = ["El hada madrina", "El dragón", "El demogorgon"];
   let action = ["borró", "desintegró", "fulminó"];
   let what = ["mi código", "mi vida", "mi pastel de manzana"];
@@ -41,5 +39,4 @@ window.onload = function() {
     document.getElementById("image").src = image ? image : "";
     return excuse;
   }
-  document.getElementById("excuse").innerHTML = upload();
 };
