@@ -2,7 +2,7 @@ window.onload = function() {
   document
     .getElementById("generateExcuse")
     .addEventListener("click", function() {
-      document.getElementById("excuse").innerHTML = upload();
+      document.getElementById("excuse").innerHTML = generateExcuse();
     });
 
   let who = ["El hada madrina", "El dragón", "El demogorgon"];
@@ -18,7 +18,7 @@ window.onload = function() {
       "https://static.wikia.nocookie.net/green-stripes-adventures/images/7/78/Demogorgon_Stranger_Things.png/revision/latest?cb=20201008181108"
   };
 
-  function upload() {
+  function generateExcuse() {
     let whoRandom = Math.floor(Math.random() * who.length);
     let actionRandom = Math.floor(Math.random() * action.length);
     let whatRandom = Math.floor(Math.random() * what.length);
@@ -34,9 +34,9 @@ window.onload = function() {
         when[whenRandom] +
         "."
     ];
-    let image = whoImage[who[whoRandom]];
+    let personaje = whoImage[who[whoRandom]];
 
-    document.getElementById("image").src = image ? image : "";
+    document.getElementById("personaje").src = personaje ? personaje : "";
     return excuse;
   }
 };
