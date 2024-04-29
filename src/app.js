@@ -5,11 +5,11 @@ window.onload = function() {
       document.getElementById("excuse").innerHTML = generateExcuse();
     });
 
-  let who = ["El hada madrina", "El dragón", "El demogorgon"];
-  let action = ["borró", "desintegró", "fulminó"];
-  let what = ["mi código", "mi vida", "mi pastel de manzana"];
-  let when = ["ayer", "el lunes", "el mes pasado"];
-  let whoImage = {
+  const who = ["El hada madrina", "El dragón", "El demogorgon"];
+  const action = ["borró", "desintegró", "fulminó"];
+  const what = ["mi código", "mi vida", "mi pastel de manzana"];
+  const when = ["ayer", "el lunes", "el mes pasado"];
+  const whoImage = {
     "El hada madrina":
       "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgS4CdulrMq3iaNREwr_7R8g5TOkOTOCBQIRXS2h7HZzLuvtC1Ib2M5X9h7D3QBtkE4fLJ0va66RuoAJMIcvxfGsc_vtFdeEtWoB8jJBqfSegoddPhhMaaUrcWrnXwOHPbDjjzWU6ww6ZA/s16000/transparent-png-shrek-Hada-Madrina-characters-download+%25281%2529.png",
     "El dragón":
@@ -19,12 +19,12 @@ window.onload = function() {
   };
 
   function generateExcuse() {
-    let whoRandom = Math.floor(Math.random() * who.length);
-    let actionRandom = Math.floor(Math.random() * action.length);
-    let whatRandom = Math.floor(Math.random() * what.length);
-    let whenRandom = Math.floor(Math.random() * when.length);
+    const whoRandom = Math.floor(Math.random() * who.length);
+    const actionRandom = Math.floor(Math.random() * action.length);
+    const whatRandom = Math.floor(Math.random() * what.length);
+    const whenRandom = Math.floor(Math.random() * when.length);
 
-    let excuse = [
+    const excuse = [
       who[whoRandom] +
         " " +
         action[actionRandom] +
@@ -34,7 +34,7 @@ window.onload = function() {
         when[whenRandom] +
         "."
     ];
-    let personaje = whoImage[who[whoRandom]];
+    const personaje = whoImage[who[whoRandom]];
 
     document.getElementById("personaje").src = personaje ? personaje : "";
     return excuse;
